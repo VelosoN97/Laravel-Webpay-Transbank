@@ -94,4 +94,11 @@ class TransbankController extends Controller
             return redirect()->route('failure')->withErrors('Transacción no autorizada.');
         }
     }
+
+    public function success(Request $request)
+    {
+        $response = session('response');
+        return view('success', compact('response'));
+    }
+    
 }
