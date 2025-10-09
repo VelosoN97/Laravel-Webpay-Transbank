@@ -100,5 +100,9 @@ class TransbankController extends Controller
         $response = session('response');
         return view('success', compact('response'));
     }
-    
+
+    public function failure()
+    {
+        return view('failure');
+    }
 }
