@@ -29,8 +29,8 @@ class TransbankController extends Controller
         ]);
 
         // Credenciales (usa las de integración de Transbank)
-        $commerceCode = env('TRANSBANK_COMMERCE_CODE');
-        $apiKey = env('TRANSBANK_API_KEY');
+        $commerceCode = config('transbank.webpay.commerce_code');
+        $apiKey = config('transbank.webpay.api_key');
         $environment = Options::ENVIRONMENT_INTEGRATION;
 
         // Crear objeto Options
